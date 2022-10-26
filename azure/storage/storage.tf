@@ -4,6 +4,7 @@ resource "azurerm_resource_group" "example" {
 }
 
 resource "azurerm_storage_account" "example" {
+  # oak9: azurerm_key_vault.network_acls.bypass is not configured
   # oak9: azurerm_key_vault.network_acls.default_action is not set to deny by default
   # oak9: microsoft_storage.storage_accounts.encryption.keyvaultproperties is not configured
   name                     = "storageaccountname"
