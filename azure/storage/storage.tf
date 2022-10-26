@@ -42,6 +42,7 @@ resource "azurerm_storage_account" "example" {
     default_action = "deny"
     bypass = ["None"]
     ip_rules =  ["10.0.0.1"]
+    # oak9: azurerm_storage_account.network_rules.ip_rules is not configured
     virtual_network_rules = [azurerm_virtual_network.example.id]
    
   }
