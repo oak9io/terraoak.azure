@@ -18,6 +18,7 @@ resource "azurerm_resource_group" "foo" {
 data "azurerm_client_config" "current" {}
 
 resource "azurerm_key_vault" "key_vault_foo" {
+  # oak9: microsoft_key_vault.vaults.network_acls.virtual_network_rules is not set to restrict network traffic to necessary virtual networks
   # oak9: azurerm_key_vault.tags is not configured
   name                              = "foo-keyvault"
   location                          = azurerm_resource_group.foo.location
