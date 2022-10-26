@@ -1,5 +1,6 @@
 
 resource "azurerm_application_gateway" "randy_gateway" {
+  # oak9: microsoft_networkapplication_gateways.application_gateways.autoscale_configuration is not configured to ensure autoscaling
   name                = "example-appgateway"
   resource_group_name = azurerm_resource_group.example.name
   location            = azurerm_resource_group.example.location
