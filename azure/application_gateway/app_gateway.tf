@@ -94,6 +94,7 @@ resource "azurerm_application_gateway" "randy_gateway" {
 
     min_protocol_version = "tlsv1_1"
     disabled_protocols = []
+  # oak9: azurerm_application_gateway.ssl_policy.disabled_protocols is not configured
   }
 
   ssl_certificate {
