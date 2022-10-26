@@ -40,7 +40,7 @@ resource "azurerm_application_gateway" "randy_gateway" {
     cookie_based_affinity = "Disabled"
     port                  = 80
     # SaC Testing - Severity: Critical - Set protocol != https
-    protocol              = "http"
+    protocol              = "Https"
 
     # SaC Testing - Severity: Critical - Set authentication_certificate to undefined
     authentication_certificate {
