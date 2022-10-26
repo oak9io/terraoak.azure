@@ -54,6 +54,7 @@ resource "azurerm_kubernetes_cluster" "example" {
 
 # managed cluster agent pools in protos
 resource "azurerm_kubernetes_cluster_node_pool" "example" {
+  # oak9: microsoft_container_service.managed_clusters_agent_pools[0].orchestrator_version is not configured
   # oak9: microsoft_container_service.managed_clusters_agent_pools[0].os_type is not configured
   # All options # Must be configured
   name                  = "internal"
