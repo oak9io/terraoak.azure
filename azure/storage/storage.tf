@@ -41,7 +41,7 @@ resource "azurerm_storage_account" "example" {
   }
 
   # SaC Testing - Severity: Critical - Set enable_https_traffic_only == false
-  enable_https_traffic_only = false
+  enable_https_traffic_only = true
 
   identity {
     # SaC Testing - Severity: Critical - Set type to ""
