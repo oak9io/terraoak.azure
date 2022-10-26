@@ -18,6 +18,7 @@ resource "azurerm_resource_group" "foo" {
 data "azurerm_client_config" "current" {}
 
 resource "azurerm_key_vault" "key_vault_foo" {
+  # oak9: azurerm_key_vault.tags is not configured
   name                              = "foo-keyvault"
   location                          = azurerm_resource_group.foo.location
   resource_group_name               = azurerm_resource_group.foo.name
