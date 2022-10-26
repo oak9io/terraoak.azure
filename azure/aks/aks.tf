@@ -30,6 +30,7 @@ resource "azurerm_kubernetes_cluster" "example" {
     
     # SaC Testing - Severity: Critical - Set client_secret to ""
     client_secret = ""
+  # oak9: azurerm_kubernetes_cluster.service_principal.client_secret is not configured
   }
 
   network_profile {
