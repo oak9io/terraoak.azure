@@ -1,0 +1,1202 @@
+{
+    "version": "",
+    "infra_type": "",
+    "model": {
+        "index": {
+            "resources": null,
+            "data_sources": null,
+            "providers": null,
+            "variables": null
+        },
+        "modules": {
+            "": {
+                "files": {
+                    "app_gateway.tf": {
+                        "path": "/tmp/7a7aebf1-066e-48f0-99bb-737982121227/application_gateway/app_gateway.tf",
+                        "blocks": {
+                            "azurerm_application_gateway.randy_gateway": {
+                                "name": "azurerm_application_gateway.randy_gateway",
+                                "type": "resource",
+                                "attributes": {
+                                    "location": {
+                                        "original": "location            = azurerm_resource_group.example.location",
+                                        "unit_type": "scope_traversal",
+                                        "parsing_unit": {
+                                            "original": "azurerm_resource_group.example.location",
+                                            "root": "azurerm_resource_group",
+                                            "index_attributes": [
+                                                "azurerm_resource_group",
+                                                "example",
+                                                "location"
+                                            ]
+                                        },
+                                        "name": "location",
+                                        "source": {
+                                            "filename": "application_gateway/app_gateway.tf",
+                                            "start_line": 5,
+                                            "start_byte": 187,
+                                            "end_line": 5,
+                                            "end_byte": 226
+                                        }
+                                    },
+                                    "name": {
+                                        "original": "name                = \"example-appgateway\"",
+                                        "unit_type": "template",
+                                        "parsing_unit": {
+                                            "whole": "\"example-appgateway\"",
+                                            "parts": [
+                                                {
+                                                    "original": "example-appgateway",
+                                                    "unit_type": "literal",
+                                                    "parsing_unit": {
+                                                        "val": "example-appgateway",
+                                                        "val_type_hint": "string"
+                                                    },
+                                                    "source": {
+                                                        "filename": "application_gateway/app_gateway.tf",
+                                                        "start_line": 3,
+                                                        "start_byte": 83,
+                                                        "end_line": 3,
+                                                        "end_byte": 101
+                                                    }
+                                                }
+                                            ]
+                                        },
+                                        "name": "name",
+                                        "source": {
+                                            "filename": "application_gateway/app_gateway.tf",
+                                            "start_line": 3,
+                                            "start_byte": 82,
+                                            "end_line": 3,
+                                            "end_byte": 102
+                                        }
+                                    },
+                                    "resource_group_name": {
+                                        "original": "resource_group_name = azurerm_resource_group.example.name",
+                                        "unit_type": "scope_traversal",
+                                        "parsing_unit": {
+                                            "original": "azurerm_resource_group.example.name",
+                                            "root": "azurerm_resource_group",
+                                            "index_attributes": [
+                                                "azurerm_resource_group",
+                                                "example",
+                                                "name"
+                                            ]
+                                        },
+                                        "name": "resource_group_name",
+                                        "source": {
+                                            "filename": "application_gateway/app_gateway.tf",
+                                            "start_line": 4,
+                                            "start_byte": 127,
+                                            "end_line": 4,
+                                            "end_byte": 162
+                                        }
+                                    }
+                                },
+                                "blocks": {
+                                    "backend_address_pool": {
+                                        "type": "backend_address_pool",
+                                        "attributes": {
+                                            "name": {
+                                                "original": "name = local.backend_address_pool_name",
+                                                "unit_type": "scope_traversal",
+                                                "parsing_unit": {
+                                                    "original": "local.backend_address_pool_name",
+                                                    "root": "local",
+                                                    "index_attributes": [
+                                                        "local",
+                                                        "backend_address_pool_name"
+                                                    ]
+                                                },
+                                                "name": "name",
+                                                "source": {
+                                                    "filename": "application_gateway/app_gateway.tf",
+                                                    "start_line": 34,
+                                                    "start_byte": 770,
+                                                    "end_line": 34,
+                                                    "end_byte": 801
+                                                }
+                                            }
+                                        },
+                                        "source": {
+                                            "filename": "application_gateway/app_gateway.tf",
+                                            "start_line": 33,
+                                            "start_byte": 757,
+                                            "end_line": 35,
+                                            "end_byte": 805
+                                        }
+                                    },
+                                    "backend_http_settings": {
+                                        "type": "backend_http_settings",
+                                        "attributes": {
+                                            "cookie_based_affinity": {
+                                                "original": "cookie_based_affinity = \"Disabled\"",
+                                                "unit_type": "template",
+                                                "parsing_unit": {
+                                                    "whole": "\"Disabled\"",
+                                                    "parts": [
+                                                        {
+                                                            "original": "Disabled",
+                                                            "unit_type": "literal",
+                                                            "parsing_unit": {
+                                                                "val": "Disabled",
+                                                                "val_type_hint": "string"
+                                                            },
+                                                            "source": {
+                                                                "filename": "application_gateway/app_gateway.tf",
+                                                                "start_line": 40,
+                                                                "start_byte": 927,
+                                                                "end_line": 40,
+                                                                "end_byte": 935
+                                                            }
+                                                        }
+                                                    ]
+                                                },
+                                                "name": "cookie_based_affinity",
+                                                "source": {
+                                                    "filename": "application_gateway/app_gateway.tf",
+                                                    "start_line": 40,
+                                                    "start_byte": 926,
+                                                    "end_line": 40,
+                                                    "end_byte": 936
+                                                }
+                                            },
+                                            "name": {
+                                                "original": "name                  = local.http_setting_name",
+                                                "unit_type": "scope_traversal",
+                                                "parsing_unit": {
+                                                    "original": "local.http_setting_name",
+                                                    "root": "local",
+                                                    "index_attributes": [
+                                                        "local",
+                                                        "http_setting_name"
+                                                    ]
+                                                },
+                                                "name": "name",
+                                                "source": {
+                                                    "filename": "application_gateway/app_gateway.tf",
+                                                    "start_line": 39,
+                                                    "start_byte": 874,
+                                                    "end_line": 39,
+                                                    "end_byte": 897
+                                                }
+                                            },
+                                            "port": {
+                                                "original": "port                  = 80",
+                                                "unit_type": "literal",
+                                                "parsing_unit": {
+                                                    "val": "80",
+                                                    "val_type_hint": "int"
+                                                },
+                                                "name": "port",
+                                                "source": {
+                                                    "filename": "application_gateway/app_gateway.tf",
+                                                    "start_line": 41,
+                                                    "start_byte": 965,
+                                                    "end_line": 41,
+                                                    "end_byte": 967
+                                                }
+                                            },
+                                            "protocol": {
+                                                "original": "protocol              = \"http\"",
+                                                "unit_type": "template",
+                                                "parsing_unit": {
+                                                    "whole": "\"http\"",
+                                                    "parts": [
+                                                        {
+                                                            "original": "http",
+                                                            "unit_type": "literal",
+                                                            "parsing_unit": {
+                                                                "val": "http",
+                                                                "val_type_hint": "string"
+                                                            },
+                                                            "source": {
+                                                                "filename": "application_gateway/app_gateway.tf",
+                                                                "start_line": 43,
+                                                                "start_byte": 1060,
+                                                                "end_line": 43,
+                                                                "end_byte": 1064
+                                                            }
+                                                        }
+                                                    ]
+                                                },
+                                                "name": "protocol",
+                                                "source": {
+                                                    "filename": "application_gateway/app_gateway.tf",
+                                                    "start_line": 43,
+                                                    "start_byte": 1059,
+                                                    "end_line": 43,
+                                                    "end_byte": 1065
+                                                }
+                                            },
+                                            "request_timeout": {
+                                                "original": "request_timeout       = 60",
+                                                "unit_type": "literal",
+                                                "parsing_unit": {
+                                                    "val": "60",
+                                                    "val_type_hint": "int"
+                                                },
+                                                "name": "request_timeout",
+                                                "source": {
+                                                    "filename": "application_gateway/app_gateway.tf",
+                                                    "start_line": 52,
+                                                    "start_byte": 1336,
+                                                    "end_line": 52,
+                                                    "end_byte": 1338
+                                                }
+                                            }
+                                        },
+                                        "blocks": {
+                                            "authentication_certificate": {
+                                                "type": "authentication_certificate",
+                                                "source": {
+                                                    "filename": "application_gateway/app_gateway.tf",
+                                                    "start_line": 46,
+                                                    "start_byte": 1183,
+                                                    "end_line": 47,
+                                                    "end_byte": 1190
+                                                }
+                                            },
+                                            "trusted_root_certificate": {
+                                                "type": "trusted_root_certificate",
+                                                "source": {
+                                                    "filename": "application_gateway/app_gateway.tf",
+                                                    "start_line": 50,
+                                                    "start_byte": 1300,
+                                                    "end_line": 51,
+                                                    "end_byte": 1307
+                                                }
+                                            }
+                                        },
+                                        "source": {
+                                            "filename": "application_gateway/app_gateway.tf",
+                                            "start_line": 38,
+                                            "start_byte": 844,
+                                            "end_line": 53,
+                                            "end_byte": 1342
+                                        }
+                                    },
+                                    "frontend_ip_configuration": {
+                                        "type": "frontend_ip_configuration",
+                                        "attributes": {
+                                            "name": {
+                                                "original": "name                 = local.frontend_ip_configuration_name",
+                                                "unit_type": "scope_traversal",
+                                                "parsing_unit": {
+                                                    "original": "local.frontend_ip_configuration_name",
+                                                    "root": "local",
+                                                    "index_attributes": [
+                                                        "local",
+                                                        "frontend_ip_configuration_name"
+                                                    ]
+                                                },
+                                                "name": "name",
+                                                "source": {
+                                                    "filename": "application_gateway/app_gateway.tf",
+                                                    "start_line": 28,
+                                                    "start_byte": 621,
+                                                    "end_line": 28,
+                                                    "end_byte": 657
+                                                }
+                                            },
+                                            "public_ip_address_id": {
+                                                "original": "public_ip_address_id = azurerm_public_ip.example.id",
+                                                "unit_type": "scope_traversal",
+                                                "parsing_unit": {
+                                                    "original": "azurerm_public_ip.example.id",
+                                                    "root": "azurerm_public_ip",
+                                                    "index_attributes": [
+                                                        "azurerm_public_ip",
+                                                        "example",
+                                                        "id"
+                                                    ]
+                                                },
+                                                "name": "public_ip_address_id",
+                                                "source": {
+                                                    "filename": "application_gateway/app_gateway.tf",
+                                                    "start_line": 29,
+                                                    "start_byte": 685,
+                                                    "end_line": 29,
+                                                    "end_byte": 713
+                                                }
+                                            }
+                                        },
+                                        "source": {
+                                            "filename": "application_gateway/app_gateway.tf",
+                                            "start_line": 27,
+                                            "start_byte": 592,
+                                            "end_line": 30,
+                                            "end_byte": 717
+                                        }
+                                    },
+                                    "frontend_port": {
+                                        "type": "frontend_port",
+                                        "attributes": {
+                                            "name": {
+                                                "original": "name = local.frontend_port_name",
+                                                "unit_type": "scope_traversal",
+                                                "parsing_unit": {
+                                                    "original": "local.frontend_port_name",
+                                                    "root": "local",
+                                                    "index_attributes": [
+                                                        "local",
+                                                        "frontend_port_name"
+                                                    ]
+                                                },
+                                                "name": "name",
+                                                "source": {
+                                                    "filename": "application_gateway/app_gateway.tf",
+                                                    "start_line": 22,
+                                                    "start_byte": 507,
+                                                    "end_line": 22,
+                                                    "end_byte": 531
+                                                }
+                                            },
+                                            "port": {
+                                                "original": "port = 80",
+                                                "unit_type": "literal",
+                                                "parsing_unit": {
+                                                    "val": "80",
+                                                    "val_type_hint": "int"
+                                                },
+                                                "name": "port",
+                                                "source": {
+                                                    "filename": "application_gateway/app_gateway.tf",
+                                                    "start_line": 23,
+                                                    "start_byte": 543,
+                                                    "end_line": 23,
+                                                    "end_byte": 545
+                                                }
+                                            }
+                                        },
+                                        "source": {
+                                            "filename": "application_gateway/app_gateway.tf",
+                                            "start_line": 21,
+                                            "start_byte": 494,
+                                            "end_line": 24,
+                                            "end_byte": 549
+                                        }
+                                    },
+                                    "gateway_ip_configuration": {
+                                        "type": "gateway_ip_configuration",
+                                        "attributes": {
+                                            "name": {
+                                                "original": "name      = \"my-gateway-ip-configuration\"",
+                                                "unit_type": "template",
+                                                "parsing_unit": {
+                                                    "whole": "\"my-gateway-ip-configuration\"",
+                                                    "parts": [
+                                                        {
+                                                            "original": "my-gateway-ip-configuration",
+                                                            "unit_type": "literal",
+                                                            "parsing_unit": {
+                                                                "val": "my-gateway-ip-configuration",
+                                                                "val_type_hint": "string"
+                                                            },
+                                                            "source": {
+                                                                "filename": "application_gateway/app_gateway.tf",
+                                                                "start_line": 16,
+                                                                "start_byte": 388,
+                                                                "end_line": 16,
+                                                                "end_byte": 415
+                                                            }
+                                                        }
+                                                    ]
+                                                },
+                                                "name": "name",
+                                                "source": {
+                                                    "filename": "application_gateway/app_gateway.tf",
+                                                    "start_line": 16,
+                                                    "start_byte": 387,
+                                                    "end_line": 16,
+                                                    "end_byte": 416
+                                                }
+                                            },
+                                            "subnet_id": {
+                                                "original": "subnet_id = azurerm_subnet.frontend.id",
+                                                "unit_type": "scope_traversal",
+                                                "parsing_unit": {
+                                                    "original": "azurerm_subnet.frontend.id",
+                                                    "root": "azurerm_subnet",
+                                                    "index_attributes": [
+                                                        "azurerm_subnet",
+                                                        "frontend",
+                                                        "id"
+                                                    ]
+                                                },
+                                                "name": "subnet_id",
+                                                "source": {
+                                                    "filename": "application_gateway/app_gateway.tf",
+                                                    "start_line": 17,
+                                                    "start_byte": 433,
+                                                    "end_line": 17,
+                                                    "end_byte": 459
+                                                }
+                                            }
+                                        },
+                                        "source": {
+                                            "filename": "application_gateway/app_gateway.tf",
+                                            "start_line": 15,
+                                            "start_byte": 369,
+                                            "end_line": 18,
+                                            "end_byte": 463
+                                        }
+                                    },
+                                    "http_listener": {
+                                        "type": "http_listener",
+                                        "attributes": {
+                                            "frontend_ip_configuration_name": {
+                                                "original": "frontend_ip_configuration_name = \"ip_config_2\"",
+                                                "unit_type": "template",
+                                                "parsing_unit": {
+                                                    "whole": "\"ip_config_2\"",
+                                                    "parts": [
+                                                        {
+                                                            "original": "ip_config_2",
+                                                            "unit_type": "literal",
+                                                            "parsing_unit": {
+                                                                "val": "ip_config_2",
+                                                                "val_type_hint": "string"
+                                                            },
+                                                            "source": {
+                                                                "filename": "application_gateway/app_gateway.tf",
+                                                                "start_line": 67,
+                                                                "start_byte": 1780,
+                                                                "end_line": 67,
+                                                                "end_byte": 1791
+                                                            }
+                                                        }
+                                                    ]
+                                                },
+                                                "name": "frontend_ip_configuration_name",
+                                                "source": {
+                                                    "filename": "application_gateway/app_gateway.tf",
+                                                    "start_line": 67,
+                                                    "start_byte": 1779,
+                                                    "end_line": 67,
+                                                    "end_byte": 1792
+                                                }
+                                            },
+                                            "frontend_port_name": {
+                                                "original": "frontend_port_name             = \"front_end_port_2\"",
+                                                "unit_type": "template",
+                                                "parsing_unit": {
+                                                    "whole": "\"front_end_port_2\"",
+                                                    "parts": [
+                                                        {
+                                                            "original": "front_end_port_2",
+                                                            "unit_type": "literal",
+                                                            "parsing_unit": {
+                                                                "val": "front_end_port_2",
+                                                                "val_type_hint": "string"
+                                                            },
+                                                            "source": {
+                                                                "filename": "application_gateway/app_gateway.tf",
+                                                                "start_line": 68,
+                                                                "start_byte": 1831,
+                                                                "end_line": 68,
+                                                                "end_byte": 1847
+                                                            }
+                                                        }
+                                                    ]
+                                                },
+                                                "name": "frontend_port_name",
+                                                "source": {
+                                                    "filename": "application_gateway/app_gateway.tf",
+                                                    "start_line": 68,
+                                                    "start_byte": 1830,
+                                                    "end_line": 68,
+                                                    "end_byte": 1848
+                                                }
+                                            },
+                                            "name": {
+                                                "original": "name                           = \"test2\"",
+                                                "unit_type": "template",
+                                                "parsing_unit": {
+                                                    "whole": "\"test2\"",
+                                                    "parts": [
+                                                        {
+                                                            "original": "test2",
+                                                            "unit_type": "literal",
+                                                            "parsing_unit": {
+                                                                "val": "test2",
+                                                                "val_type_hint": "string"
+                                                            },
+                                                            "source": {
+                                                                "filename": "application_gateway/app_gateway.tf",
+                                                                "start_line": 66,
+                                                                "start_byte": 1735,
+                                                                "end_line": 66,
+                                                                "end_byte": 1740
+                                                            }
+                                                        }
+                                                    ]
+                                                },
+                                                "name": "name",
+                                                "source": {
+                                                    "filename": "application_gateway/app_gateway.tf",
+                                                    "start_line": 66,
+                                                    "start_byte": 1734,
+                                                    "end_line": 66,
+                                                    "end_byte": 1741
+                                                }
+                                            },
+                                            "port": {
+                                                "original": "port                           = 445",
+                                                "unit_type": "literal",
+                                                "parsing_unit": {
+                                                    "val": "445",
+                                                    "val_type_hint": "int"
+                                                },
+                                                "name": "port",
+                                                "source": {
+                                                    "filename": "application_gateway/app_gateway.tf",
+                                                    "start_line": 71,
+                                                    "start_byte": 1992,
+                                                    "end_line": 71,
+                                                    "end_byte": 1995
+                                                }
+                                            },
+                                            "protocol": {
+                                                "original": "protocol                       = \"HTTP\"",
+                                                "unit_type": "template",
+                                                "parsing_unit": {
+                                                    "whole": "\"HTTP\"",
+                                                    "parts": [
+                                                        {
+                                                            "original": "HTTP",
+                                                            "unit_type": "literal",
+                                                            "parsing_unit": {
+                                                                "val": "HTTP",
+                                                                "val_type_hint": "string"
+                                                            },
+                                                            "source": {
+                                                                "filename": "application_gateway/app_gateway.tf",
+                                                                "start_line": 70,
+                                                                "start_byte": 1949,
+                                                                "end_line": 70,
+                                                                "end_byte": 1953
+                                                            }
+                                                        }
+                                                    ]
+                                                },
+                                                "name": "protocol",
+                                                "source": {
+                                                    "filename": "application_gateway/app_gateway.tf",
+                                                    "start_line": 70,
+                                                    "start_byte": 1948,
+                                                    "end_line": 70,
+                                                    "end_byte": 1954
+                                                }
+                                            }
+                                        },
+                                        "source": {
+                                            "filename": "application_gateway/app_gateway.tf",
+                                            "start_line": 65,
+                                            "start_byte": 1695,
+                                            "end_line": 72,
+                                            "end_byte": 1999
+                                        }
+                                    },
+                                    "probe": {
+                                        "type": "probe",
+                                        "attributes": {
+                                            "interval": {
+                                                "original": "interval = 100",
+                                                "unit_type": "literal",
+                                                "parsing_unit": {
+                                                    "val": "100",
+                                                    "val_type_hint": "int"
+                                                },
+                                                "name": "interval",
+                                                "source": {
+                                                    "filename": "application_gateway/app_gateway.tf",
+                                                    "start_line": 84,
+                                                    "start_byte": 2350,
+                                                    "end_line": 84,
+                                                    "end_byte": 2353
+                                                }
+                                            },
+                                            "name": {
+                                                "original": "name = \"test-probe\"",
+                                                "unit_type": "template",
+                                                "parsing_unit": {
+                                                    "whole": "\"test-probe\"",
+                                                    "parts": [
+                                                        {
+                                                            "original": "test-probe",
+                                                            "unit_type": "literal",
+                                                            "parsing_unit": {
+                                                                "val": "test-probe",
+                                                                "val_type_hint": "string"
+                                                            },
+                                                            "source": {
+                                                                "filename": "application_gateway/app_gateway.tf",
+                                                                "start_line": 85,
+                                                                "start_byte": 2366,
+                                                                "end_line": 85,
+                                                                "end_byte": 2376
+                                                            }
+                                                        }
+                                                    ]
+                                                },
+                                                "name": "name",
+                                                "source": {
+                                                    "filename": "application_gateway/app_gateway.tf",
+                                                    "start_line": 85,
+                                                    "start_byte": 2365,
+                                                    "end_line": 85,
+                                                    "end_byte": 2377
+                                                }
+                                            },
+                                            "path": {
+                                                "original": "path = \"test-path\"",
+                                                "unit_type": "template",
+                                                "parsing_unit": {
+                                                    "whole": "\"test-path\"",
+                                                    "parts": [
+                                                        {
+                                                            "original": "test-path",
+                                                            "unit_type": "literal",
+                                                            "parsing_unit": {
+                                                                "val": "test-path",
+                                                                "val_type_hint": "string"
+                                                            },
+                                                            "source": {
+                                                                "filename": "application_gateway/app_gateway.tf",
+                                                                "start_line": 90,
+                                                                "start_byte": 2477,
+                                                                "end_line": 90,
+                                                                "end_byte": 2486
+                                                            }
+                                                        }
+                                                    ]
+                                                },
+                                                "name": "path",
+                                                "source": {
+                                                    "filename": "application_gateway/app_gateway.tf",
+                                                    "start_line": 90,
+                                                    "start_byte": 2476,
+                                                    "end_line": 90,
+                                                    "end_byte": 2487
+                                                }
+                                            },
+                                            "protocol": {
+                                                "original": "protocol = \"http\"",
+                                                "unit_type": "template",
+                                                "parsing_unit": {
+                                                    "whole": "\"http\"",
+                                                    "parts": [
+                                                        {
+                                                            "original": "http",
+                                                            "unit_type": "literal",
+                                                            "parsing_unit": {
+                                                                "val": "http",
+                                                                "val_type_hint": "string"
+                                                            },
+                                                            "source": {
+                                                                "filename": "application_gateway/app_gateway.tf",
+                                                                "start_line": 88,
+                                                                "start_byte": 2458,
+                                                                "end_line": 88,
+                                                                "end_byte": 2462
+                                                            }
+                                                        }
+                                                    ]
+                                                },
+                                                "name": "protocol",
+                                                "source": {
+                                                    "filename": "application_gateway/app_gateway.tf",
+                                                    "start_line": 88,
+                                                    "start_byte": 2457,
+                                                    "end_line": 88,
+                                                    "end_byte": 2463
+                                                }
+                                            },
+                                            "timeout": {
+                                                "original": "timeout = 100",
+                                                "unit_type": "literal",
+                                                "parsing_unit": {
+                                                    "val": "100",
+                                                    "val_type_hint": "int"
+                                                },
+                                                "name": "timeout",
+                                                "source": {
+                                                    "filename": "application_gateway/app_gateway.tf",
+                                                    "start_line": 91,
+                                                    "start_byte": 2502,
+                                                    "end_line": 91,
+                                                    "end_byte": 2505
+                                                }
+                                            },
+                                            "unhealthy_threshold": {
+                                                "original": "unhealthy_threshold = 2",
+                                                "unit_type": "literal",
+                                                "parsing_unit": {
+                                                    "val": "2",
+                                                    "val_type_hint": "int"
+                                                },
+                                                "name": "unhealthy_threshold",
+                                                "source": {
+                                                    "filename": "application_gateway/app_gateway.tf",
+                                                    "start_line": 92,
+                                                    "start_byte": 2532,
+                                                    "end_line": 92,
+                                                    "end_byte": 2533
+                                                }
+                                            }
+                                        },
+                                        "source": {
+                                            "filename": "application_gateway/app_gateway.tf",
+                                            "start_line": 83,
+                                            "start_byte": 2333,
+                                            "end_line": 93,
+                                            "end_byte": 2537
+                                        }
+                                    },
+                                    "request_routing_rule": {
+                                        "type": "request_routing_rule",
+                                        "attributes": {
+                                            "backend_address_pool_name": {
+                                                "original": "backend_address_pool_name  = local.backend_address_pool_name",
+                                                "unit_type": "scope_traversal",
+                                                "parsing_unit": {
+                                                    "original": "local.backend_address_pool_name",
+                                                    "root": "local",
+                                                    "index_attributes": [
+                                                        "local",
+                                                        "backend_address_pool_name"
+                                                    ]
+                                                },
+                                                "name": "backend_address_pool_name",
+                                                "source": {
+                                                    "filename": "application_gateway/app_gateway.tf",
+                                                    "start_line": 79,
+                                                    "start_byte": 2231,
+                                                    "end_line": 79,
+                                                    "end_byte": 2262
+                                                }
+                                            },
+                                            "backend_http_settings_name": {
+                                                "original": "backend_http_settings_name = local.http_setting_name",
+                                                "unit_type": "scope_traversal",
+                                                "parsing_unit": {
+                                                    "original": "local.http_setting_name",
+                                                    "root": "local",
+                                                    "index_attributes": [
+                                                        "local",
+                                                        "http_setting_name"
+                                                    ]
+                                                },
+                                                "name": "backend_http_settings_name",
+                                                "source": {
+                                                    "filename": "application_gateway/app_gateway.tf",
+                                                    "start_line": 80,
+                                                    "start_byte": 2296,
+                                                    "end_line": 80,
+                                                    "end_byte": 2319
+                                                }
+                                            },
+                                            "http_listener_name": {
+                                                "original": "http_listener_name         = local.listener_name",
+                                                "unit_type": "scope_traversal",
+                                                "parsing_unit": {
+                                                    "original": "local.listener_name",
+                                                    "root": "local",
+                                                    "index_attributes": [
+                                                        "local",
+                                                        "listener_name"
+                                                    ]
+                                                },
+                                                "name": "http_listener_name",
+                                                "source": {
+                                                    "filename": "application_gateway/app_gateway.tf",
+                                                    "start_line": 78,
+                                                    "start_byte": 2178,
+                                                    "end_line": 78,
+                                                    "end_byte": 2197
+                                                }
+                                            },
+                                            "name": {
+                                                "original": "name                       = local.request_routing_rule_name",
+                                                "unit_type": "scope_traversal",
+                                                "parsing_unit": {
+                                                    "original": "local.request_routing_rule_name",
+                                                    "root": "local",
+                                                    "index_attributes": [
+                                                        "local",
+                                                        "request_routing_rule_name"
+                                                    ]
+                                                },
+                                                "name": "name",
+                                                "source": {
+                                                    "filename": "application_gateway/app_gateway.tf",
+                                                    "start_line": 76,
+                                                    "start_byte": 2072,
+                                                    "end_line": 76,
+                                                    "end_byte": 2103
+                                                }
+                                            },
+                                            "rule_type": {
+                                                "original": "rule_type                  = \"Basic\"",
+                                                "unit_type": "template",
+                                                "parsing_unit": {
+                                                    "whole": "\"Basic\"",
+                                                    "parts": [
+                                                        {
+                                                            "original": "Basic",
+                                                            "unit_type": "literal",
+                                                            "parsing_unit": {
+                                                                "val": "Basic",
+                                                                "val_type_hint": "string"
+                                                            },
+                                                            "source": {
+                                                                "filename": "application_gateway/app_gateway.tf",
+                                                                "start_line": 77,
+                                                                "start_byte": 2138,
+                                                                "end_line": 77,
+                                                                "end_byte": 2143
+                                                            }
+                                                        }
+                                                    ]
+                                                },
+                                                "name": "rule_type",
+                                                "source": {
+                                                    "filename": "application_gateway/app_gateway.tf",
+                                                    "start_line": 77,
+                                                    "start_byte": 2137,
+                                                    "end_line": 77,
+                                                    "end_byte": 2144
+                                                }
+                                            }
+                                        },
+                                        "source": {
+                                            "filename": "application_gateway/app_gateway.tf",
+                                            "start_line": 75,
+                                            "start_byte": 2037,
+                                            "end_line": 81,
+                                            "end_byte": 2323
+                                        }
+                                    },
+                                    "sku": {
+                                        "type": "sku",
+                                        "attributes": {
+                                            "capacity": {
+                                                "original": "capacity = 2",
+                                                "unit_type": "literal",
+                                                "parsing_unit": {
+                                                    "val": "2",
+                                                    "val_type_hint": "int"
+                                                },
+                                                "name": "capacity",
+                                                "source": {
+                                                    "filename": "application_gateway/app_gateway.tf",
+                                                    "start_line": 11,
+                                                    "start_byte": 322,
+                                                    "end_line": 11,
+                                                    "end_byte": 323
+                                                }
+                                            },
+                                            "name": {
+                                                "original": "name     = \"Standard_Small\"",
+                                                "unit_type": "template",
+                                                "parsing_unit": {
+                                                    "whole": "\"Standard_Small\"",
+                                                    "parts": [
+                                                        {
+                                                            "original": "Standard_Small",
+                                                            "unit_type": "literal",
+                                                            "parsing_unit": {
+                                                                "val": "Standard_Small",
+                                                                "val_type_hint": "string"
+                                                            },
+                                                            "source": {
+                                                                "filename": "application_gateway/app_gateway.tf",
+                                                                "start_line": 9,
+                                                                "start_byte": 265,
+                                                                "end_line": 9,
+                                                                "end_byte": 279
+                                                            }
+                                                        }
+                                                    ]
+                                                },
+                                                "name": "name",
+                                                "source": {
+                                                    "filename": "application_gateway/app_gateway.tf",
+                                                    "start_line": 9,
+                                                    "start_byte": 264,
+                                                    "end_line": 9,
+                                                    "end_byte": 280
+                                                }
+                                            },
+                                            "tier": {
+                                                "original": "tier     = \"Standard\"",
+                                                "unit_type": "template",
+                                                "parsing_unit": {
+                                                    "whole": "\"Standard\"",
+                                                    "parts": [
+                                                        {
+                                                            "original": "Standard",
+                                                            "unit_type": "literal",
+                                                            "parsing_unit": {
+                                                                "val": "Standard",
+                                                                "val_type_hint": "string"
+                                                            },
+                                                            "source": {
+                                                                "filename": "application_gateway/app_gateway.tf",
+                                                                "start_line": 10,
+                                                                "start_byte": 297,
+                                                                "end_line": 10,
+                                                                "end_byte": 305
+                                                            }
+                                                        }
+                                                    ]
+                                                },
+                                                "name": "tier",
+                                                "source": {
+                                                    "filename": "application_gateway/app_gateway.tf",
+                                                    "start_line": 10,
+                                                    "start_byte": 296,
+                                                    "end_line": 10,
+                                                    "end_byte": 306
+                                                }
+                                            }
+                                        },
+                                        "source": {
+                                            "filename": "application_gateway/app_gateway.tf",
+                                            "start_line": 8,
+                                            "start_byte": 247,
+                                            "end_line": 12,
+                                            "end_byte": 327
+                                        }
+                                    },
+                                    "ssl_certificate": {
+                                        "type": "ssl_certificate",
+                                        "attributes": {
+                                            "key_vault_secret_id": {
+                                                "original": "key_vault_secret_id = \"\"",
+                                                "unit_type": "template",
+                                                "parsing_unit": {
+                                                    "whole": "\"\"",
+                                                    "parts": [
+                                                        {
+                                                            "unit_type": "literal",
+                                                            "parsing_unit": {
+                                                                "val": "",
+                                                                "val_type_hint": "string"
+                                                            },
+                                                            "source": {
+                                                                "filename": "application_gateway/app_gateway.tf",
+                                                                "start_line": 111,
+                                                                "start_byte": 3103,
+                                                                "end_line": 111,
+                                                                "end_byte": 3103
+                                                            }
+                                                        }
+                                                    ]
+                                                },
+                                                "name": "key_vault_secret_id",
+                                                "source": {
+                                                    "filename": "application_gateway/app_gateway.tf",
+                                                    "start_line": 111,
+                                                    "start_byte": 3101,
+                                                    "end_line": 111,
+                                                    "end_byte": 3103
+                                                }
+                                            },
+                                            "name": {
+                                                "original": "name = \"test-cert\"",
+                                                "unit_type": "template",
+                                                "parsing_unit": {
+                                                    "whole": "\"test-cert\"",
+                                                    "parts": [
+                                                        {
+                                                            "original": "test-cert",
+                                                            "unit_type": "literal",
+                                                            "parsing_unit": {
+                                                                "val": "test-cert",
+                                                                "val_type_hint": "string"
+                                                            },
+                                                            "source": {
+                                                                "filename": "application_gateway/app_gateway.tf",
+                                                                "start_line": 109,
+                                                                "start_byte": 2996,
+                                                                "end_line": 109,
+                                                                "end_byte": 3005
+                                                            }
+                                                        }
+                                                    ]
+                                                },
+                                                "name": "name",
+                                                "source": {
+                                                    "filename": "application_gateway/app_gateway.tf",
+                                                    "start_line": 109,
+                                                    "start_byte": 2995,
+                                                    "end_line": 109,
+                                                    "end_byte": 3006
+                                                }
+                                            },
+                                            "password": {
+                                                "original": "password = \"test-cert-pass\"",
+                                                "unit_type": "template",
+                                                "parsing_unit": {
+                                                    "whole": "\"test-cert-pass\"",
+                                                    "parts": [
+                                                        {
+                                                            "original": "test-cert-pass",
+                                                            "unit_type": "literal",
+                                                            "parsing_unit": {
+                                                                "val": "test-cert-pass",
+                                                                "val_type_hint": "string"
+                                                            },
+                                                            "source": {
+                                                                "filename": "application_gateway/app_gateway.tf",
+                                                                "start_line": 112,
+                                                                "start_byte": 3120,
+                                                                "end_line": 112,
+                                                                "end_byte": 3134
+                                                            }
+                                                        }
+                                                    ]
+                                                },
+                                                "name": "password",
+                                                "source": {
+                                                    "filename": "application_gateway/app_gateway.tf",
+                                                    "start_line": 112,
+                                                    "start_byte": 3119,
+                                                    "end_line": 112,
+                                                    "end_byte": 3135
+                                                }
+                                            }
+                                        },
+                                        "source": {
+                                            "filename": "application_gateway/app_gateway.tf",
+                                            "start_line": 108,
+                                            "start_byte": 2982,
+                                            "end_line": 113,
+                                            "end_byte": 3139
+                                        }
+                                    },
+                                    "ssl_policy": {
+                                        "type": "ssl_policy",
+                                        "attributes": {
+                                            "cipher_suites": {
+                                                "original": "cipher_suites = []",
+                                                "unit_type": "tuple_cons",
+                                                "parsing_unit": {
+                                                    "elements": []
+                                                },
+                                                "name": "cipher_suites",
+                                                "source": {
+                                                    "filename": "application_gateway/app_gateway.tf",
+                                                    "start_line": 100,
+                                                    "start_byte": 2742,
+                                                    "end_line": 100,
+                                                    "end_byte": 2744
+                                                }
+                                            },
+                                            "disabled_protocols": {
+                                                "original": "disabled_protocols = []",
+                                                "unit_type": "tuple_cons",
+                                                "parsing_unit": {
+                                                    "elements": []
+                                                },
+                                                "name": "disabled_protocols",
+                                                "source": {
+                                                    "filename": "application_gateway/app_gateway.tf",
+                                                    "start_line": 105,
+                                                    "start_byte": 2956,
+                                                    "end_line": 105,
+                                                    "end_byte": 2958
+                                                }
+                                            },
+                                            "min_protocol_version": {
+                                                "original": "min_protocol_version = \"tlsv1_1\"",
+                                                "unit_type": "template",
+                                                "parsing_unit": {
+                                                    "whole": "\"tlsv1_1\"",
+                                                    "parts": [
+                                                        {
+                                                            "original": "tlsv1_1",
+                                                            "unit_type": "literal",
+                                                            "parsing_unit": {
+                                                                "val": "tlsv1_1",
+                                                                "val_type_hint": "string"
+                                                            },
+                                                            "source": {
+                                                                "filename": "application_gateway/app_gateway.tf",
+                                                                "start_line": 103,
+                                                                "start_byte": 2852,
+                                                                "end_line": 103,
+                                                                "end_byte": 2859
+                                                            }
+                                                        }
+                                                    ]
+                                                },
+                                                "name": "min_protocol_version",
+                                                "source": {
+                                                    "filename": "application_gateway/app_gateway.tf",
+                                                    "start_line": 103,
+                                                    "start_byte": 2851,
+                                                    "end_line": 103,
+                                                    "end_byte": 2860
+                                                }
+                                            },
+                                            "policy_type": {
+                                                "original": "policy_type = \"Custom\"",
+                                                "unit_type": "template",
+                                                "parsing_unit": {
+                                                    "whole": "\"Custom\"",
+                                                    "parts": [
+                                                        {
+                                                            "original": "Custom",
+                                                            "unit_type": "literal",
+                                                            "parsing_unit": {
+                                                                "val": "Custom",
+                                                                "val_type_hint": "string"
+                                                            },
+                                                            "source": {
+                                                                "filename": "application_gateway/app_gateway.tf",
+                                                                "start_line": 97,
+                                                                "start_byte": 2631,
+                                                                "end_line": 97,
+                                                                "end_byte": 2637
+                                                            }
+                                                        }
+                                                    ]
+                                                },
+                                                "name": "policy_type",
+                                                "source": {
+                                                    "filename": "application_gateway/app_gateway.tf",
+                                                    "start_line": 97,
+                                                    "start_byte": 2630,
+                                                    "end_line": 97,
+                                                    "end_byte": 2638
+                                                }
+                                            }
+                                        },
+                                        "source": {
+                                            "filename": "application_gateway/app_gateway.tf",
+                                            "start_line": 96,
+                                            "start_byte": 2610,
+                                            "end_line": 106,
+                                            "end_byte": 2962
+                                        }
+                                    }
+                                },
+                                "source": {
+                                    "filename": "application_gateway/app_gateway.tf",
+                                    "start_line": 2,
+                                    "start_byte": 56,
+                                    "end_line": 114,
+                                    "end_byte": 3141
+                                }
+                            }
+                        }
+                    }
+                },
+                "path": "/tmp/7a7aebf1-066e-48f0-99bb-737982121227/application_gateway"
+            }
+        }
+    }
+}
