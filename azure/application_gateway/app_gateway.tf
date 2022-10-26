@@ -1,5 +1,6 @@
 
 resource "azurerm_application_gateway" "randy_gateway" {
+  # oak9: microsoft_networkapplication_gateways.application_gateways.web_application_firewall_configuration is not configured
   # oak9: microsoft_networkapplication_gateways.application_gateways.tags is not configured
   # oak9: azurerm_application_gateway.backend_http_settings.connection_draining.drain_timeout_sec is not configured
   # oak9: azurerm_application_gateway.backend_http_settings.connection_draining.enabled is not configured
