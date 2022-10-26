@@ -18,6 +18,7 @@ resource "azurerm_kubernetes_cluster" "example" {
   load_balancer_profile{
       # SaC Testing - Severity: High - Set idle_timeout_in_minutes to > 5
       idle_timeout_in_minutes = 10
+  # oak9: azurerm_kubernetes_cluster.network_profile.load_balancer_profile.idle_timeout_in_minutes does not specify the timeout for outbound idle connections
   }
   
   default_node_pool {
