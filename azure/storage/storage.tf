@@ -32,7 +32,7 @@ resource "azurerm_storage_account" "example" {
     }    
   }
 
-  enable_https_traffic_only = false
+  enable_https_traffic_only = true
 
   identity {
 
