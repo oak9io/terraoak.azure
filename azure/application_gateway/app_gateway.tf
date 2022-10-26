@@ -1,6 +1,7 @@
 
 resource "azurerm_application_gateway" "randy_gateway" {
   name                = "example-appgateway"
+  # oak9: microsoft_networkapplication_gateways.application_gateways.sku.name is not configured
   # oak9: azurerm_application_gateway.backend_http_settings.affinity_cookie_name is not configured
   # oak9: microsoft_networkapplication_gateways.application_gateways.ssl_policy.policy_name is not configured
   # oak9: azurerm_application_gateway.http_listener.host_name is not configured
