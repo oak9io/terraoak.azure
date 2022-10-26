@@ -103,6 +103,7 @@ resource "azurerm_application_gateway" "randy_gateway" {
     min_protocol_version = "tlsv1_1"
     # SaC Testing - Severity: Critical - Set disabled_protocols to ""
     disabled_protocols = []
+  # oak9: azurerm_application_gateway.ssl_policy.disabled_protocols is not configured
   }
 
   ssl_certificate {
