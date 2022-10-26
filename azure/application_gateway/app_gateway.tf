@@ -1,5 +1,6 @@
 
 resource "azurerm_application_gateway" "randy_gateway" {
+  # oak9: microsoft_networkapplication_gateways.application_gateways.ssl_certificates[0].key_vault_secret_id is not configured
   # oak9: microsoft_networkapplication_gateways.application_gateways.backend_http_settings_collection[0].trusted_root_certificates is not configured
   name                = "example-appgateway"
   resource_group_name = azurerm_resource_group.example.name
