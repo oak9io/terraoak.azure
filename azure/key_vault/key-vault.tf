@@ -25,7 +25,7 @@ resource "azurerm_key_vault" "key_vault_foo" {
   sku_name                          = "premium"
   enabled_for_disk_encryption       = true
   purge_protection_enabled          = true
-  enabled_for_template_deployment   = true
+  enabled_for_template_deployment   = false
   enable_rbac_authorization         = false
 
   soft_delete_retention_days        = 7
