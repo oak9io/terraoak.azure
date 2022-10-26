@@ -98,6 +98,7 @@ resource "azurerm_application_gateway" "randy_gateway" {
     
     # SaC Testing - Severity: Critical - Set cipher_suites != preferred value
     cipher_suites = []
+  # oak9: azurerm_application_gateway.ssl_policy.cipher_suites is not configured
 
     # SaC Testing - Severity: Critical - Set min_protocol_version !=  tlsv1_2
     min_protocol_version = "tlsv1_1"
