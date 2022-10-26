@@ -23,7 +23,7 @@ resource "azurerm_key_vault" "key_vault_foo" {
   resource_group_name               = azurerm_resource_group.foo.name
   tenant_id                         = data.azurerm_client_config.current.tenant_id
   sku_name                          = "premium"
-  enabled_for_disk_encryption       = true
+  enabled_for_disk_encryption       = false
   purge_protection_enabled          = true
   enabled_for_template_deployment   = false
   enable_rbac_authorization         = false
