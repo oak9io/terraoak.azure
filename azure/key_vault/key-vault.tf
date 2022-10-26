@@ -34,6 +34,7 @@ resource "azurerm_key_vault" "key_vault_foo" {
   network_acls {
     # SaC Testing - Severity: Critical - set bypass to ""
     bypass          = ""             // Possible values are AzureServices and None.
+    # oak9: azurerm_key_vault.network_acls.bypass is not configured
     # SaC Testing - Severity: Critical - set defualt_action to ""
     default_action  = "deny"
     ip_rules        =   ""
