@@ -13,7 +13,7 @@ resource "azurerm_kubernetes_cluster" "example" {
   disk_encryption_set_id = ""
 
   # SaC Testing - Severity: High - Set private_cluster_enabled to false
-  private_cluster_enabled = false
+  private_cluster_enabled = true
 
   load_balancer_profile{
       # SaC Testing - Severity: High - Set idle_timeout_in_minutes to > 5
