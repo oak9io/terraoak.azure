@@ -1,5 +1,6 @@
 
 resource "azurerm_application_gateway" "randy_gateway" {
+  # oak9: azurerm_application_gateway.backend_http_settings.connection_draining.enabled is not configured
   # oak9: microsoft_networkapplication_gateways.application_gateways.zones is not configured to be resilient to single zone failures
   # oak9: microsoft_networkapplication_gateways.application_gateways.autoscale_configuration is not configured to ensure autoscaling
   name                = "example-appgateway"
