@@ -11,6 +11,7 @@ resource "azurerm_kubernetes_cluster" "example" {
   
   # SaC Testing - Severity: Critical - Set disk_encryption_set_id to ""
   disk_encryption_set_id = ""
+  # oak9: azurerm_kubernetes_cluster.disk_encryption_set_id is not configured
 
   # SaC Testing - Severity: High - Set private_cluster_enabled to false
   private_cluster_enabled = false
