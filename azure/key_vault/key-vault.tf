@@ -37,6 +37,7 @@ resource "azurerm_key_vault" "key_vault_foo" {
     # SaC Testing - Severity: Critical - set defualt_action to ""
     default_action  =  ""          // When no rules match from ip_rules/virtual_network_subnet_ids
     ip_rules        =   ""
+    # oak9: microsoft_key_vault.vaults.network_acls.ip_rules is not set to restrict network traffic to necessary IPs
     virtual_network_subnet_ids   = ""
   }
 
