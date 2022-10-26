@@ -1,6 +1,7 @@
 
 resource "azurerm_application_gateway" "randy_gateway" {
   name                = "example-appgateway"
+  # oak9: azurerm_application_gateway.http_listener.host_name is not configured
   # oak9: microsoft_networkapplication_gateways.application_gateways.backend_http_settings_collection[0].host_name is not configured
   resource_group_name = azurerm_resource_group.example.name
   location            = azurerm_resource_group.example.location
