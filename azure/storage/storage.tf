@@ -55,6 +55,7 @@ resource "azurerm_storage_account" "example" {
     bypass = [""]
     # SaC Testing - Severity: Critical - Set ip_rules == ""
     ip_rules =  [""]
+  # oak9: azurerm_storage_account.network_rules.ip_rules is not configured
 
     # Note: blueprint checks for ip_rule value and action which are both 
     # undefined in tf
