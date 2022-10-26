@@ -39,14 +39,11 @@ resource "azurerm_application_gateway" "randy_gateway" {
     name                  = local.http_setting_name
     cookie_based_affinity = "Disabled"
     port                  = 80
-    # SaC Testing - Severity: Critical - Set protocol != https
     protocol              = "http"
 
-    # SaC Testing - Severity: Critical - Set authentication_certificate to undefined
     authentication_certificate {
     }
 
-    # SaC Testing - Severity: High - Set trusted_root_certificate to undefined
     trusted_root_certificate {
     }
     request_timeout       = 60
@@ -57,18 +54,16 @@ resource "azurerm_application_gateway" "randy_gateway" {
     name                           = "test1"
     frontend_ip_configuration_name = "ip_config_1"
     frontend_port_name             = "front_end_port_1"
-    # SaC Testing - Severity: Critical - Set protocol to http
     protocol                       = "HTTP"
-    port                           = 443
+    port                           = 80
   }
 
   http_listener {
     name                           = "test2"
     frontend_ip_configuration_name = "ip_config_2"
     frontend_port_name             = "front_end_port_2"
-    # SaC Testing - Severity: Critical - Set protocol to http
     protocol                       = "HTTP"
-    port                           = 445
+    port                           = 80
   }
 
   # Required
@@ -84,7 +79,6 @@ resource "azurerm_application_gateway" "randy_gateway" {
     interval = 100
     name = "test-probe"
 
-    # SaC Testing - Severity: Critical - Set protocol != https
     protocol = "http"
 
     path = "test-path"
@@ -96,18 +90,14 @@ resource "azurerm_application_gateway" "randy_gateway" {
   ssl_policy {
     policy_type = "Custom"
     
-    # SaC Testing - Severity: Critical - Set cipher_suites != preferred value
     cipher_suites = []
 
-    # SaC Testing - Severity: Critical - Set min_protocol_version !=  tlsv1_2
     min_protocol_version = "tlsv1_1"
-    # SaC Testing - Severity: Critical - Set disabled_protocols to ""
     disabled_protocols = []
   }
 
   ssl_certificate {
     name = "test-cert"
-    # SaC Testing - Severity: High - Set key_vault_secret_id to " "
     key_vault_secret_id = ""
     password = "test-cert-pass"
   }

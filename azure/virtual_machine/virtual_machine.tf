@@ -56,20 +56,15 @@ resource "azurerm_virtual_machine" "main" {
     name              = "myosdisk1"
     caching           = "ReadWrite"
     create_option     = "Attach"
-    # SaC Testing - Severity: Critical - Set managed_disk_id to undefined
     managed_disk_id = ""
 
-    # Note: 2 validations are written to check managed_disk is defined AND encryption
-    # is defined. Encyrption is not mentioned in the tf so these will always fail
+    
   }
 
-# SaC Testing - Severity: Critical - Set storage_data_disk to undefined
 storage_data_disk {
   name = "test-name"
-  # SaC Testing - Severity: Critical - Set managed_disk_id to undefined
   managed_disk_id = "test-disk"
 
-  # Note: this validation is also dependent on encryption which is undefined
 }
 
   os_profile {
@@ -79,13 +74,10 @@ storage_data_disk {
   }
   
   os_profile_windows_config {
-    # SaC Testing - Severity: High - Set winrm to undefined
     winrm {
         protocol = "HTTP"
     }
 
-    # Note: validation is checking for defined listeners on winrm, this checks
-    # the listener protocol which means there is an assumed listener present
   }
   tags = {
     environment = "staging"

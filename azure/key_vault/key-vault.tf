@@ -32,9 +32,7 @@ resource "azurerm_key_vault" "key_vault_foo" {
   enabled_for_deployment            = true
 
   network_acls {
-    # SaC Testing - Severity: Critical - set bypass to ""
-    bypass          = ""             // Possible values are AzureServices and None.
-    # SaC Testing - Severity: Critical - set defualt_action to ""
+    bypass          = "None"             // Possible values are AzureServices and None.
     default_action  =  ""          // When no rules match from ip_rules/virtual_network_subnet_ids
     ip_rules        =   ""
     virtual_network_subnet_ids   = ""
@@ -46,31 +44,26 @@ resource "azurerm_key_vault" "key_vault_foo" {
     phone  =  ""
   }
 
-  # SaC Testing - Severity: Critical - Set access_policy to no null
   access_policy {
-    #tenant_id = data.azurerm_client_config.current.tenant_id
-    #object_id = data.azurerm_client_config.current.object_id
+    tenant_id = data.azurerm_client_config.current.tenant_id
+    object_id = data.azurerm_client_config.current.object_id
 
-    #azure_ad_user_principal_names       = ["foo1@example.com", "foo2@example.com"]
-    #key_permissions                     = ["get", "list"]
-    #secret_permissions                  = ["get", "list"]
-    #storage_permissions                 = ["get", "list"]
-    #certificate_permissions             = ["get", "import", "list"]
+    azure_ad_user_principal_names       = ["foo1@example.com", "foo2@example.com"]
+    key_permissions                     = ["get", "list"]
+    secret_permissions                  = ["get", "list"]
+    storage_permissions                 = ["get", "list"]
+    certificate_permissions             = ["get", "import", "list"]
   }
 }
 
 // Needed for Encrypted disk
 resource "azurerm_key_vault_key" "foo_key" {
   name              = "foo-vault_key"
-  key_vault_id      = azurerm_key_vault.foo.id
-  # SaC Testing - Severity: High - Set key_type to " "
+  key_vault_id      = azurerm_key_vault.key_vault_foo.id
   key_type          = ""
   key_size          = 2048
-  # SaC Testing - Severity: High - Set curve to ""
   curve = ""
-  # SaC Testing - Severity: Critical - Set exp to ""
   expiration_date = ""
-  #SaC Testing - Severity: High - Set nbf to ""
   not_before_date = ""
   key_opts = ["decrypt", "encrypt", "sign", "unwrapKey", "verify", "wrapKey"]
 }
@@ -78,7 +71,7 @@ resource "azurerm_key_vault_key" "foo_key" {
 
 resource "azurerm_key_vault_certificate" "foo" {
   name              = "generated-cert"
-  key_vault_id      = azurerm_key_vault.foo.id
+  key_vault_id      = azurerm_key_vault.key_vault_foo.id
 
   certificate_policy {
     issuer_parameters {
@@ -107,8 +100,6 @@ resource "azurerm_key_vault_certificate" "foo" {
     }
 
     x509_certificate_properties {
-      # Server Authentication = 1.3.6.1.5.5.7.3.1
-      # Client Authentication = 1.3.6.1.5.5.7.3.2
       extended_key_usage = ["1.3.6.1.5.5.7.3.1"]
 
       key_usage = [
