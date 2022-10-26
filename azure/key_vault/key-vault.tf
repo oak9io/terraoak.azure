@@ -61,6 +61,7 @@ resource "azurerm_key_vault" "key_vault_foo" {
 
 // Needed for Encrypted disk
 resource "azurerm_key_vault_key" "foo_key" {
+  # oak9: azurerm_key_vault_key.tags is not configured
   name              = "foo-vault_key"
   key_vault_id      = azurerm_key_vault.foo.id
   # SaC Testing - Severity: High - Set key_type to " "
