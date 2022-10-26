@@ -35,7 +35,7 @@ resource "azurerm_key_vault" "key_vault_foo" {
     # SaC Testing - Severity: Critical - set bypass to ""
     bypass          = ""             // Possible values are AzureServices and None.
     # SaC Testing - Severity: Critical - set defualt_action to ""
-    default_action  =  ""          // When no rules match from ip_rules/virtual_network_subnet_ids
+    default_action  = "deny"
     ip_rules        =   ""
     virtual_network_subnet_ids   = ""
   }
