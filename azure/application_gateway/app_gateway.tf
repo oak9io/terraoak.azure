@@ -1,5 +1,6 @@
 
 resource "azurerm_application_gateway" "randy_gateway" {
+  # oak9: microsoft_networkapplication_gateways.application_gateways.frontend_ip_configurations[0].private_ip_allocation_method is not configured
   # oak9: microsoft_networkapplication_gateways.application_gateways.frontend_ip_configurations[0].private_ip_address is not configured
   # oak9: microsoft_networkapplication_gateways.application_gateways.frontend_ports is not configured
   # oak9: microsoft_networkapplication_gateways.application_gateways.redirect_configurations is not configured
