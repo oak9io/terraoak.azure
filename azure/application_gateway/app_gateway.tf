@@ -62,7 +62,7 @@ resource "azurerm_application_gateway" "example_app_gateway" {
     name                           = "test2"
     frontend_ip_configuration_name = "ip_config_2"
     frontend_port_name             = "front_end_port_2"
-    protocol                       = "HTTP"
+    protocol                       = "Https"
     port                           = 80
   }
 
