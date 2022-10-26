@@ -67,7 +67,7 @@ resource "azurerm_application_gateway" "randy_gateway" {
     frontend_ip_configuration_name = "ip_config_2"
     frontend_port_name             = "front_end_port_2"
     # SaC Testing - Severity: Critical - Set protocol to http
-    protocol                       = "HTTP"
+    protocol                       = "Https"
     port                           = 445
   }
 
