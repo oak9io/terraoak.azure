@@ -33,6 +33,7 @@ resource "azurerm_key_vault" "key_vault_foo" {
 
   network_acls {
     bypass          = "None"             // Possible values are AzureServices and None.
+    # oak9: azurerm_key_vault.network_acls.bypass is not configured
     default_action  = "deny"
     ip_rules        =   ""
     virtual_network_subnet_ids   = ""
