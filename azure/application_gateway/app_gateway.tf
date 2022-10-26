@@ -37,7 +37,7 @@ resource "azurerm_application_gateway" "randy_gateway" {
   # Required
   backend_http_settings {
     name                  = local.http_setting_name
-    cookie_based_affinity = "Disabled"
+    cookie_based_affinity = "Enabled"
     port                  = 80
     # SaC Testing - Severity: Critical - Set protocol != https
     protocol              = "http"
