@@ -4,6 +4,7 @@ resource "azurerm_resource_group" "aks_example" {
 }
 # managed cluster in protos
 resource "azurerm_kubernetes_cluster" "example" {
+  # oak9: azurerm_kubernetes_cluster.network_profile.network_policy is not configured
   # All options # Must be configured
   name                = "example-aks1"
   location            = azurerm_resource_group.example.location
