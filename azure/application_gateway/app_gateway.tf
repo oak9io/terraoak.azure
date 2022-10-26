@@ -1,5 +1,6 @@
 
 resource "azurerm_application_gateway" "randy_gateway" {
+  # oak9: azurerm_application_gateway.probe.minimum_servers is not configured
   # oak9: microsoft_networkapplication_gateways.application_gateways.probes[0].match is not configured
   # oak9: azurerm_application_gateway.probe.host is not configured
   name                = "example-appgateway"
