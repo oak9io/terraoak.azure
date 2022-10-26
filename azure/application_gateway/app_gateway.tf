@@ -1,5 +1,6 @@
 
 resource "azurerm_application_gateway" "randy_gateway" {
+  # oak9: microsoft_networkapplication_gateways.application_gateways.redirect_configurations is not configured
   # oak9: microsoft_networkapplication_gateways.application_gateways.backend_address_pools[0].backend_addresses is not configured
   # oak9: microsoft_networkapplication_gateways.application_gateways.probes[0].protocol is not configured
   # oak9: microsoft_networkapplication_gateways.application_gateways.probes[0].port is not configured
