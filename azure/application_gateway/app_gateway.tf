@@ -92,7 +92,7 @@ resource "azurerm_application_gateway" "randy_gateway" {
     
     cipher_suites = []
 
-    min_protocol_version = "tlsv1_1"
+    min_protocol_version = "TLSv1_2"
     disabled_protocols = []
   }
 
