@@ -46,6 +46,7 @@ resource "azurerm_storage_account" "example" {
   identity {
     # SaC Testing - Severity: Critical - Set type to ""
     type = ""
+  # oak9: azurerm_storage_account.identity.type is not configured
   }
   # SaC Testing - Severity: Critical - Set network_rules == undefined
   network_rules {
