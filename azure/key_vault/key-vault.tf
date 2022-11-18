@@ -32,9 +32,7 @@ resource "azurerm_key_vault" "key_vault_foo" {
   enabled_for_deployment            = true
 
   network_acls {
-    # SaC Testing - Severity: Critical - set bypass to ""
     bypass          = ""             // Possible values are AzureServices and None.
-    # SaC Testing - Severity: Critical - set defualt_action to ""
     default_action  =  ""          // When no rules match from ip_rules/virtual_network_subnet_ids
     ip_rules        =   ""
     virtual_network_subnet_ids   = ""
@@ -61,14 +59,10 @@ resource "azurerm_key_vault" "key_vault_foo" {
 resource "azurerm_key_vault_key" "foo_key" {
   name              = "foo-vault_key"
   key_vault_id      = azurerm_key_vault.key_vault_foo.id
-  # SaC Testing - Severity: High - Set key_type to " "
   key_type          = ""
   key_size          = 2048
-  # SaC Testing - Severity: High - Set curve to ""
   curve = ""
-  # SaC Testing - Severity: Critical - Set exp to ""
   expiration_date = ""
-  #SaC Testing - Severity: High - Set nbf to ""
   not_before_date = ""
   key_opts = ["decrypt", "encrypt", "sign", "unwrapKey", "verify", "wrapKey"]
 }
