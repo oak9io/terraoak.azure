@@ -58,7 +58,7 @@ resource "azurerm_kubernetes_cluster_node_pool" "example" {
   vm_size               = "Standard_DS2_v2"
 
  
-  enable_node_public_ip = true
+  enable_node_public_ip = false
 
   
   zones = []
