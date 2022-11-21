@@ -33,7 +33,7 @@ resource "azurerm_key_vault" "key_vault_foo" {
 
   network_acls {
     bypass          = ""             // Possible values are AzureServices and None.
-    default_action  =  ""          // When no rules match from ip_rules/virtual_network_subnet_ids
+    default_action  = "deny"
     ip_rules        =   ""
     virtual_network_subnet_ids   = ""
   }
