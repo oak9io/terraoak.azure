@@ -34,6 +34,7 @@ resource "azurerm_network_interface" "main" {
 }
 
 resource "azurerm_virtual_machine" "main" {
+  # oak9: microsoft_compute_virtual_machines.virtual_machines.os_profile.windows_configuration.win_r_m.listeners is not configured
   name                  = "${var.prefix}-vm"
   location              = azurerm_resource_group.example.location
   resource_group_name   = azurerm_resource_group.example.name
