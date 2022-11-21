@@ -51,7 +51,7 @@ resource "azurerm_key_vault" "key_vault_foo" {
     azure_ad_user_principal_names       = ["foo1@example.com", "foo2@example.com"]
     key_permissions                     = ["all"]
     secret_permissions                  = ["all"]
-    certificate_permissions             = ["all"]
+    certificate_permissions             = "["Get"]"
   }
 }
 
