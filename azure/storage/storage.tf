@@ -58,6 +58,7 @@ resource "azurerm_storage_account_customer_managed_key" "example" {
 
   key_name                    = ""
   key_version                 = ""
+  # oak9: azurerm_storage_account_customer_managed_key.key_version is not configured
   user_assigned_identity_id   = ""
 
   
