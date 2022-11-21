@@ -39,7 +39,7 @@ resource "azurerm_application_gateway" "example_app_gateway" {
     name                  = local.http_setting_name
     cookie_based_affinity = "Disabled"
     port                  = 80
-    protocol              = "http"
+    protocol              = "Https"
 
     authentication_certificate {
     }
