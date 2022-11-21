@@ -99,6 +99,7 @@ resource "azurerm_application_gateway" "example_app_gateway" {
   ssl_certificate {
     name = "test-cert"
     key_vault_secret_id = ""
+    # oak9: azurerm_application_gateway.ssl_certificate.key_vault_secret_id is not configured
     password = "test-cert-pass"
   }
 }
