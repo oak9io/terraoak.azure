@@ -10,7 +10,7 @@ resource "azurerm_storage_account" "example" {
   account_tier             = "Standard"
   account_replication_type = "GRS"
 
-  min_tls_version = "TLS_1_0"
+  min_tls_version = "TLS1_2"
 
   allow_nested_items_to_be_public = true
 
