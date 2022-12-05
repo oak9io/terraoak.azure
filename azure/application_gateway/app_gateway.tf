@@ -79,7 +79,7 @@ resource "azurerm_application_gateway" "example_app_gateway" {
     interval = 100
     name = "test-probe"
 
-    protocol = "http"
+    protocol = "Https"
 
     path = "test-path"
     timeout = 100
