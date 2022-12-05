@@ -1,5 +1,7 @@
 
 resource "azurerm_application_gateway" "example_app_gateway" {
+  # oak9: microsoft_networkapplication_gateways.application_gateways.backend_http_settings_collection[0].authentication_certificates is not configured
+  # oak9: azurerm_application_gateway.authentication_certificate is not configured
   name                = "example-appgateway"
   resource_group_name = azurerm_resource_group.example.name
   location            = azurerm_resource_group.example.location
@@ -39,7 +41,7 @@ resource "azurerm_application_gateway" "example_app_gateway" {
     name                  = local.http_setting_name
     cookie_based_affinity = "Disabled"
     port                  = 80
-    protocol              = "http"
+    protocol              = "Https"
 
     authentication_certificate {
     }
@@ -79,7 +81,7 @@ resource "azurerm_application_gateway" "example_app_gateway" {
     interval = 100
     name = "test-probe"
 
-    protocol = "http"
+    protocol = "Https"
 
     path = "test-path"
     timeout = 100
@@ -92,7 +94,7 @@ resource "azurerm_application_gateway" "example_app_gateway" {
     
     cipher_suites = []
 
-    min_protocol_version = "tlsv1_1"
+    min_protocol_version = "TLSv1_2"
     disabled_protocols = []
   }
 

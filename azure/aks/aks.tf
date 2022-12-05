@@ -43,7 +43,7 @@ resource "azurerm_kubernetes_cluster" "example" {
   azure_active_directory_role_based_access_control {
     managed = true
     
-    azure_rbac_enabled = false
+    azure_rbac_enabled = true
   }
   tags = {
     Environment = "Production"
@@ -58,7 +58,7 @@ resource "azurerm_kubernetes_cluster_node_pool" "example" {
   vm_size               = "Standard_DS2_v2"
 
  
-  enable_node_public_ip = true
+  enable_node_public_ip = false
 
   
   zones = []
