@@ -4,7 +4,9 @@ resource "azurerm_resource_group" "example" {
 }
 
 resource "azurerm_storage_account" "example" {
+  # oak9: azurerm_key_vault.vault_uri is not configured
   name                     = "storageaccountname"
+  # oak9: azurerm_storage_account_customer_managed_key.key_name is not configured
   resource_group_name      = azurerm_resource_group.example.name
   location                 = azurerm_resource_group.example.location
   account_tier             = "Standard"
@@ -58,6 +60,7 @@ resource "azurerm_storage_account_customer_managed_key" "example" {
 
   key_name                    = ""
   key_version                 = ""
+  # oak9: azurerm_storage_account_customer_managed_key.key_version is not configured
   user_assigned_identity_id   = ""
 
   

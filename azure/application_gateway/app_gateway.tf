@@ -1,5 +1,6 @@
 
 resource "azurerm_application_gateway" "example_app_gateway" {
+  # oak9: microsoft_networkapplication_gateways.application_gateways.backend_http_settings_collection[0].trusted_root_certificates is not configured
   name                = "example-appgateway"
   resource_group_name = azurerm_resource_group.example.name
   location            = azurerm_resource_group.example.location
@@ -94,11 +95,13 @@ resource "azurerm_application_gateway" "example_app_gateway" {
 
     min_protocol_version = "tlsv1_1"
     disabled_protocols = []
+  # oak9: azurerm_application_gateway.ssl_policy.disabled_protocols is not configured
   }
 
   ssl_certificate {
     name = "test-cert"
     key_vault_secret_id = ""
+    # oak9: azurerm_application_gateway.ssl_certificate.key_vault_secret_id is not configured
     password = "test-cert-pass"
   }
 }

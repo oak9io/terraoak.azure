@@ -59,7 +59,7 @@ resource "azurerm_key_vault" "key_vault_foo" {
 resource "azurerm_key_vault_key" "foo_key" {
   name              = "foo-vault_key"
   key_vault_id      = azurerm_key_vault.key_vault_foo.id
-  key_type          = ""
+  key_type          = "" # oak9: key_type should be set to any of ec, ec-hsm, rsa, rsa-hsm
   key_size          = 2048
   curve = ""
   expiration_date = ""
@@ -68,6 +68,7 @@ resource "azurerm_key_vault_key" "foo_key" {
 }
 
 resource "azurerm_key_vault_secret" "foo_secret" {
+  # oak9: microsoft_key_vault.vaults_secrets[0].attributes is not configured
   name = "foo-vault_secret"
   key_vault_id = azurerm_key_vault.key_vault_foo.id
 }
